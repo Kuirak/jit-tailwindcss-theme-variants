@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JIT Theme Variants Group bug</title>
+    <link rel="stylesheet" href="./tailwind.gen.css" />
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-700">
+    <div
+      class="w-full h-36 group bg-gray-400 dark:bg-gray-600 flex items-center"
+    >
+      <div
+        class="w-full h-16 group-hover:bg-teal-700 dark:group-hover:bg-amber-300 text-center text-lg border-2 border-black"
+      >
+        Hover me
+      </div>
+    </div>
+
+    <button
+      class="bg-amber-300 dark:bg-amber-500 p-4 border-white border-2 m-4"
+      onclick="document.documentElement.classList.contains('dark-theme') ? document.documentElement.classList.remove('dark-theme') : document.documentElement.classList.add('dark-theme')"
+    >
+      Toggle Dark
+    </button>
+  </body>
+</html>
